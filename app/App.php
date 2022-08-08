@@ -2,10 +2,16 @@
 
 namespace App;
 
-use PhpFramework\Framework;
+use PhpFramework\Router\Router;
 
 class App {
     public static function run() {
-        echo(Framework::hello());
+        $router = new Router();
+
+        // routes registering
+        $routes = require_once __DIR__ . './routes.php';
+        $routes($router);
+
+        print $router->dispatch();
     }
 }
