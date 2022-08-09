@@ -1,18 +1,18 @@
 {
-    "name": "opmvpc/php-framework",
-    "description": "php micro framework",
-    "type": "project",
-    "autoload": {
-        "psr-4": {
-            "PhpFramework\\": "src/",
-            "App\\": "app/"
-        }
-    },
-    "authors": [
-        {
-            "name": "opmvpc",
-            "email": "thibsix@outlook.be"
-        }
-    ],
-    "require": {}
+  "name": "opmvpc/php-framework",
+  "description": "php micro framework",
+  "type": "project",
+  "autoload": {
+    "psr-4": {
+      "PhpFramework\\": "framework/",
+      "App\\": "app/"
+    }
+  },
+  "authors": [
+    {
+      "name": "opmvpc",
+      "email": "thibsix@outlook.be"
+    }
+  ],
+  "require": {}
 }
