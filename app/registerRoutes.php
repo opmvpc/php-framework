@@ -3,10 +3,8 @@
 use App\Http\Controllers\HomeController;
 use PhpFramework\Router\Router;
 
-return $routes = function (Router $router) {
+return $registerRoutes = function (Router $router) {
     $router->get('/', [HomeController::class, 'index']);
 
-    $router->get('/articles', function () {
-        print 'article';
-    });
+    $router->get('/articles', fn () => print 'article');
 };

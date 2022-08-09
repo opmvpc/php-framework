@@ -8,10 +8,10 @@ class Route
     protected string $method;
     protected $action;
 
-    const GET = 'GET';
-    const POST = 'POST';
-    const PUT = 'PUT';
-    const DELETE = 'DELETE';
+    public const GET = 'GET';
+    public const POST = 'POST';
+    public const PUT = 'PUT';
+    public const DELETE = 'DELETE';
 
 
     private function __construct(string $path, string $method, $action)
@@ -26,7 +26,7 @@ class Route
         return new Route($path, static::GET, $action);
     }
 
-    public function run()
+    public function run(): void
     {
         if (\is_array($this->action)) {
             [$controllerName, $methodName] = $this->action;

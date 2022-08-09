@@ -2,8 +2,10 @@
 
 namespace PhpFramework;
 
-class Framework {
-    public static function hello(): string {
+class Framework
+{
+    public static function hello(): string
+    {
         return "coucou";
     }
 }

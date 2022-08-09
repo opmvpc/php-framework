@@ -11,8 +11,8 @@ class App
         $router = new Router();
 
         // routes registering
-        $routes = require_once __DIR__ . '/routes.php';
-        $routes($router);
+        $registerRoutes = require_once __DIR__ . '/registerRoutes.php';
+        $registerRoutes($router);
 
         $router->dispatch();
     }
