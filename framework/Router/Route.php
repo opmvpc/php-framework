@@ -28,7 +28,12 @@ class Route
 
     public function run()
     {
-        return call_user_func($this->action);
+        if (\is_array($this->action)) {
+            [$controllerName, $methodName] = $this->action;
+            (new $controllerName())->$methodName();
+        } else {
+            ($this->action)();
+        }
     }
 
     public function path(): string
